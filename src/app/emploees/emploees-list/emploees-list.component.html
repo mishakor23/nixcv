@@ -4,41 +4,6 @@
 </header>
 <main class="main">
     <ul class="resume__list">
-        <li class="resume__item">
-            <a href="#" class="resume__title">
-               Ivan Ivanov
-           </a>
-            <button class="btn btn-remove">Remove</button>
-        </li>
-        <li class="resume__item">
-            <a href="#" class="resume__title">
-               Ivan Ivanov
-           </a>
-            <button class="btn btn-remove">Remove</button>
-        </li>
-        <li class="resume__item">
-            <a href="#" class="resume__title">
-               Ivan Ivanov
-           </a>
-            <button class="btn btn-remove">Remove</button>
-        </li>
-        <li class="resume__item">
-            <a href="#" class="resume__title">
-               Ivan Ivanov
-           </a>
-            <button class="btn btn-remove">Remove</button>
-        </li>
-        <li class="resume__item">
-            <a href="#" class="resume__title">
-               Ivan Ivanov
-           </a>
-            <button class="btn btn-remove">Remove</button>
-        </li>
-        <li class="resume__item">
-            <a href="#" class="resume__title">
-               Ivan Ivanov
-           </a>
-            <button class="btn btn-remove">Remove</button>
-        </li>
+        <app-emploee-item *ngFor="let emploee of emploees | async" [emploee]="emploee "></app-emploee-item>
     </ul>
 </main>
