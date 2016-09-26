@@ -6,8 +6,9 @@ import { HttpModule } from '@angular/http';
 import { app_routing } from './app.routes';
 
 import { AppComponent } from './app.component';
-import { EmploeesListComponent } from './emploees/emploees-list/emploees-list.component';
-import { EmploeesAddFormComponent } from './emploees/emploees-add-form/emploees-add-form.component';
+import { EmploeesService } from './emploees/';
+import { EmploeesListComponent } from './emploees/';
+import { EmploeesAddFormComponent } from './emploees/';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { EmploeesAddFormComponent } from './emploees/emploees-add-form/emploees-
     HttpModule,
     app_routing
   ],
-  providers: [],
+  providers: [EmploeesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
