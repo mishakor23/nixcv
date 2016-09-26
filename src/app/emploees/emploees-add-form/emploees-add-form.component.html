@@ -8,7 +8,7 @@
           class="form-inp--dashed personal-info__name"
           placeholder="ИМЯ"
           required
-          [ngModel]="firstName"
+          [(ngModel)]="newEmploee.firstName"
           name="firstName"/>
         <input
           type="text"
@@ -17,7 +17,7 @@
           class="form-inp--dashed personal-info__surname"
           placeholder="ФАМИЛИЯ"
           required
-          [ngModel]="firstName"
+          [(ngModel)]="newEmploee.lastName"
           name="lastName"/>
     </div>
     <div class="personal-photo">
@@ -39,7 +39,7 @@
             class="form-inp"
             placeholder="Lead JavaScript developer"
             required
-            [ngModel]="role"
+            [(ngModel)]="newEmploee.role"
             name="role"/>
       </div>
       <div class="form-group form-group--bordered">
@@ -49,7 +49,7 @@
             rows="3"
             placeholder="5 years iniversity degree..."
             required
-            [ngModel]="technicalExpertise"
+            [(ngModel)]="newEmploee.technicalExpertise"
             name="technicalExpertise"
           ></textarea>
       </div>
@@ -61,7 +61,7 @@
             rows="3"
             placeholder="Environment E-commerce Application, Linux..."
             required
-            [ngModel]="skills"
+            [(ngModel)]="newEmploee.skills"
             name="skills"
           ></textarea>
       </div>
@@ -73,7 +73,7 @@
             rows="3"
             placeholder="Environment E-commerce Application, Linux..."
             required
-            [ngModel]="communication"
+            [(ngModel)]="newEmploee.communication"
             name="communication"
           ></textarea>
       </div>
@@ -85,7 +85,7 @@
             rows="3"
             placeholder="Environment E-commerce Application, Linux, J2EE 1.6, Cloud Computing (AWS), JBoss 5.0.0, Web Services, Apache Axis2 1.2, SOAP, Spring, Spring JDBC Template, Struts 2, JSP, JSTL, Servlet, JDBC, Ajax, HtmlUnit, Open Symphony Quartz, LDAP (OpenDS), MySQL, Hibernate, CSS, Object Oriented JavaScript, jQuery...."
             required
-            [ngModel]="leadership"
+            [(ngModel)]="newEmploee.leadership"
             name="leadership"
           ></textarea>
       </div>
@@ -97,7 +97,7 @@
             rows="3"
             placeholder="Environment E-commerce Application, Linux..."
             required
-            [ngModel]="education"
+            [(ngModel)]="newEmploee.education"
             name="education"
           ></textarea>
 
