@@ -11,6 +11,7 @@ import { EmploeesService } from './emploees/';
 import { EmploeesListComponent } from './emploees/';
 import { EmploeesAddFormComponent } from './emploees/';
 import { EmploeeItemComponent } from './emploees/emploees-list/emploee-item.component';
+import { EmploeeGridComponent } from './emploees/emploee-grid/emploee-grid.component';
 
 
 
@@ -27,7 +28,8 @@ export const firebaseConfig = {
     AppComponent,
     EmploeesListComponent,
     EmploeesAddFormComponent,
-    EmploeeItemComponent
+    EmploeeItemComponent,
+    EmploeeGridComponent
   ],
   imports: [
     BrowserModule,
