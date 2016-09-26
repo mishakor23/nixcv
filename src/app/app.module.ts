@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { EmploeesService } from './emploees/';
 import { EmploeesListComponent } from './emploees/';
 import { EmploeesAddFormComponent } from './emploees/';
+import { EmploeeItemComponent } from './emploees/emploees-list/emploee-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmploeesListComponent,
-    EmploeesAddFormComponent
+    EmploeesAddFormComponent,
+    EmploeeItemComponent
   ],
   imports: [
     BrowserModule,
