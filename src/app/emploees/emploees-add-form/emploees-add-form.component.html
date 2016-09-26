@@ -1,0 +1,44 @@
+<form action="#" class="form">
+  <header class="header">
+    <div class="personal-info">
+        <input type="text" name="role-inp" id="role-inp" class="form-inp--dashed personal-info__name" placeholder="ИМЯ" />
+        <input type="text" name="role-inp" id="role-inp" class="form-inp--dashed personal-info__surname" placeholder="ФАМИЛИЯ" />
+    </div>
+    <div class="personal-photo">
+        <div class="personal-photo-inner">
+            <input type="file" name="pic" id="file-inp" class="file-inp" accept="image/*" value="Upload" />
+            <img src="assets/img/nix_link.png" alt="" />
+        </div>
+        <label for="file-inp" class="btn-mask"><span>Upload</span></label>
+    </div>
+  </header>
+
+  <main class="main">
+      <div class="form-group form-group--bordered">
+          <label for="role-inp" class="label">Role</label>
+          <input type="text" name="role-inp" id="role-inp" class="form-inp" placeholder="Lead JavaScript developer" />
+      </div>
+      <div class="form-group form-group--bordered">
+          <label for="technical-inp" class="label">TECHNICAL EXPERTISE</label>
+          <textarea id="technical-inp" class="form-inp" rows="3" placeholder="5 years iniversity degree..."></textarea>
+      </div>
+      <div class="form-group form-group--bordered">
+          <label for="tools-inp" class="label">TOOLS & FRAMEWORKS</label>
+          <textarea id="tools-inp" class="form-inp" rows="3" placeholder="Environment E-commerce Application, Linux..."></textarea>
+      </div>
+      <div class="form-group form-group--bordered">
+          <label for="communication-inp" class="label">COMMUNICATION</label>
+          <textarea id="tools-inp" class="form-inp" rows="3" placeholder="Environment E-commerce Application, Linux..."></textarea>
+      </div>
+      <div class="form-group form-group--bordered">
+          <label for="leadership-inp" class="label">LEADERSHIP</label>
+          <textarea id="tools-inp" class="form-inp" rows="3" placeholder="Environment E-commerce Application, Linux, J2EE 1.6, Cloud Computing (AWS), JBoss 5.0.0, Web Services, Apache Axis2 1.2, SOAP, Spring, Spring JDBC Template, Struts 2, JSP, JSTL, Servlet, JDBC, Ajax, HtmlUnit, Open Symphony Quartz, LDAP (OpenDS), MySQL, Hibernate, CSS, Object Oriented JavaScript, jQuery...."></textarea>
+      </div>
+      <div class="form-group form-group--bordered">
+          <label for="education-inp" class="label">EDUCATION</label>
+          <textarea id="tools-inp" class="form-inp" rows="3" placeholder="Environment E-commerce Application, Linux..."></textarea>
+
+      </div>
+      <button class="btn btn-add"><span>Add resume</span></button>
+  </main>
+</form>
