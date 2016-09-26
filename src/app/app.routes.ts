@@ -6,7 +6,7 @@ import { EmploeesAddFormComponent } from './emploees/emploees-add-form/emploees-
 const app_routes: Routes = [
   { path: '', redirectTo: '/emploees', pathMatch: 'full' },
   { path: 'emploees', component: EmploeesListComponent },
-  { path: 'emploees/add', component: EmploeesAddFormComponent },
+  { path: 'emploees/create', component: EmploeesAddFormComponent },
 ];
 
 export const app_routing = RouterModule.forRoot(app_routes);
