@@ -17,4 +17,11 @@ export class EmploeesListComponent implements OnInit {
     this.emploees = this.emploeesService.getEmploees();
   }
 
+  onDeleteEmploee(key: string) {
+    if(confirm('Are you sure?')) {
+      this.emploeesService.deleteEmploee(key);
+    } else {
+      return false;
+    }
+  }
 }

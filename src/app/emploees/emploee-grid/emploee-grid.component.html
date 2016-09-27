@@ -1,9 +1,10 @@
 <header class="header">
     <div class="personal-info">
-        <p class="personal-info__name"></p>
-        <p class="personal-info__surname"></p>
+        <p class="personal-info__name"> {{ emploee.firstName }} </p>
+        <p class="personal-info__surname">{{ emploee.lastName }}</p>
     </div>
     <div class="personal-photo"><img src="assets/img/nix_new_logo.png" alt="" /></div>
+
 </header>
 <main class="main">
     <table class="table">
@@ -13,7 +14,7 @@
                     Role
                 </td>
                 <td class="row__descr table__cell">
-                    Lead JavaScript developer
+                    {{ emploee.role }}
                 </td>
             </tr>
             <tr class="table__row row">
@@ -21,7 +22,7 @@
                     Technical Expertise
                 </td>
                 <td class="row__descr table__cell">
-                    Lead JavaScript developer
+                    {{ emploee.technicalExpertise }}
                 </td>
             </tr>
             <tr class="table__row row">
@@ -29,7 +30,7 @@
                     Tools & Frameworks
                 </td>
                 <td class="row__descr table__cell">
-                    Environment E-commerce Application, Linux, J2EE 1.6, Cloud Computing (AWS), JBoss 5.0.0, Web Services, Apache Axis2 1.2, SOAP, Spring, Spring JDBC Template, Struts 2, JSP, JSTL, Servlet, JDBC, Ajax, HtmlUnit, Freemarker, Jasypt, Multithreading, Open Symphony Quartz, LDAP (OpenDS), MySQL, Hibernate, CSS, Object Oriented JavaScript, jQuery, jQuery UI, SVN, Hudson (For Continuous Integration), Bugzilla, SSH.
+                    {{ emploee.skills }}
                 </td>
             </tr>
             <tr class="table__row row">
@@ -37,7 +38,7 @@
                     Communication
                 </td>
                 <td class="row__descr table__cell">
-                    Environment E-commerce Application, Linux, J2EE 1.6, Cloud Computing (AWS), JBoss 5.0.0, Web Services, Apache Axis2 1.2, SOAP, Spring, Spring JDBC Template, Struts 2, JSP, JSTL, Servlet, JDBC, Ajax, HtmlUnit, Freemarker, Jasypt, Multithreading, Open Symphony Quartz, LDAP (OpenDS), MySQL, Hibernate, CSS, Object Oriented JavaScript, jQuery, jQuery UI, SVN, Hudson (For Continuous Integration), Bugzilla, SSH.
+                  {{ emploee.communication }}
                 </td>
             </tr>
             <tr class="table__row row">
@@ -45,7 +46,7 @@
                     Leadership
                 </td>
                 <td class="row__descr table__cell">
-                    Environment E-commerce Application, Linux, J2EE 1.6, Cloud Computing (AWS), JBoss 5.0.0, Web Services, Apache Axis2 1.2, SOAP, Spring, Spring JDBC Template, Struts 2, JSP, JSTL, Servlet, JDBC, Ajax, HtmlUnit, Freemarker, Jasypt, Multithreading, Open Symphony Quartz, LDAP (OpenDS), MySQL, Hibernate, CSS, Object Oriented JavaScript, jQuery, jQuery UI, SVN, Hudson (For Continuous Integration), Bugzilla, SSH.
+                  {{ emploee.leadership }}
                 </td>
             </tr>
             <tr class="table__row row">
@@ -53,9 +54,10 @@
                     Education
                 </td>
                 <td class="row__descr table__cell">
-                    Lead JavaScript developer
+                    {{ emploee.education }}
                 </td>
             </tr>
         </tbody>
     </table>
+    <a [routerLink]="['edit']"><button class="btn btn-edit"><span>Edit resume</span></button></a>
 </main>

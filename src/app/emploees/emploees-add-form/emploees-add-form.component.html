@@ -8,7 +8,7 @@
           class="form-inp--dashed personal-info__name"
           placeholder="ИМЯ"
           required
-          [(ngModel)]="newEmploee.firstName"
+          [(ngModel)]="emploee.firstName"
           name="firstName"/>
         <input
           type="text"
@@ -17,7 +17,7 @@
           class="form-inp--dashed personal-info__surname"
           placeholder="ФАМИЛИЯ"
           required
-          [(ngModel)]="newEmploee.lastName"
+          [(ngModel)]="emploee.lastName"
           name="lastName"/>
     </div>
     <div class="personal-photo">
@@ -39,7 +39,7 @@
             class="form-inp"
             placeholder="Lead JavaScript developer"
             required
-            [(ngModel)]="newEmploee.role"
+            [(ngModel)]="emploee.role"
             name="role"/>
       </div>
       <div class="form-group form-group--bordered">
@@ -49,7 +49,7 @@
             rows="3"
             placeholder="5 years iniversity degree..."
             required
-            [(ngModel)]="newEmploee.technicalExpertise"
+            [(ngModel)]="emploee.technicalExpertise"
             name="technicalExpertise"
           ></textarea>
       </div>
@@ -61,7 +61,7 @@
             rows="3"
             placeholder="Environment E-commerce Application, Linux..."
             required
-            [(ngModel)]="newEmploee.skills"
+            [(ngModel)]="emploee.skills"
             name="skills"
           ></textarea>
       </div>
@@ -73,7 +73,7 @@
             rows="3"
             placeholder="Environment E-commerce Application, Linux..."
             required
-            [(ngModel)]="newEmploee.communication"
+            [(ngModel)]="emploee.communication"
             name="communication"
           ></textarea>
       </div>
@@ -85,7 +85,7 @@
             rows="3"
             placeholder="Environment E-commerce Application, Linux, J2EE 1.6, Cloud Computing (AWS), JBoss 5.0.0, Web Services, Apache Axis2 1.2, SOAP, Spring, Spring JDBC Template, Struts 2, JSP, JSTL, Servlet, JDBC, Ajax, HtmlUnit, Open Symphony Quartz, LDAP (OpenDS), MySQL, Hibernate, CSS, Object Oriented JavaScript, jQuery...."
             required
-            [(ngModel)]="newEmploee.leadership"
+            [(ngModel)]="emploee.leadership"
             name="leadership"
           ></textarea>
       </div>
@@ -97,11 +97,12 @@
             rows="3"
             placeholder="Environment E-commerce Application, Linux..."
             required
-            [(ngModel)]="newEmploee.education"
+            [(ngModel)]="emploee.education"
             name="education"
           ></textarea>
 
       </div>
-      <button class="btn btn-add" type="submit"><span>Add resume</span></button>
+      <button class="btn btn-add" type="submit" *ngIf="isNew"><span>Add resume</span></button>
+      <button class="btn btn-add" type="submit" *ngIf="!isNew"><span>Update resume</span></button>
   </main>
 </form>

@@ -3,7 +3,9 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Injectable()
 export class EmploeesService {
-  emploees: FirebaseListObservable<any>;
+  emploee;
+  emploees: FirebaseListObservable<any[]>;
+
   constructor(private af: AngularFire) {
     this.emploees =  this.af.database.list('emploees');
   }
@@ -14,5 +16,23 @@ export class EmploeesService {
 
   createEmploee(newEmploee) {
     this.emploees.push(newEmploee);
+  }
+
+  deleteEmploee(key: string) {
+    this.emploees.remove(key);
+  }
+
+  updateEmploee(emploee, id) {
+    console.log(emploee.firstName, id)
+    this.emploees.update(id, {
+      firstName: emploee.firstName,
+      lastName: emploee.lastName,
+      role: emploee.role,
+      technicalExpertise: emploee.technicalExpertise,
+      skills: emploee.skills,
+      communication: emploee.communication,
+      leadership: emploee.leadership,
+      education: emploee.education
+    });
   }
 }

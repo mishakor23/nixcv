@@ -7,8 +7,9 @@ import { EmploeeGridComponent } from './emploees/emploee-grid/emploee-grid.compo
 const app_routes: Routes = [
   { path: '', redirectTo: '/emploees', pathMatch: 'full' },
   { path: 'emploees', component: EmploeesListComponent },
-  { path: 'emploees/:id', component: EmploeeGridComponent },
   { path: 'emploees/create', component: EmploeesAddFormComponent },
+  { path: 'emploees/:id', component: EmploeeGridComponent },
+  { path: 'emploees/:id/edit', component: EmploeesAddFormComponent },
 ];
 
 export const app_routing = RouterModule.forRoot(app_routes);

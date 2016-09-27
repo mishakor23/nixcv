@@ -2,5 +2,5 @@
     <a [routerLink]="[emploee.$key]" class="resume__title">
      {{emploee.firstName}} {{emploee.lastName}}
     </a>
-    <button class="btn btn-remove">Remove</button>
+    <button class="btn btn-remove" (click)="onDelete()">Remove</button>
 </li>
