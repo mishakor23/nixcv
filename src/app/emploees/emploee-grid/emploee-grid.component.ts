@@ -1,35 +1,30 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import 'rxjs/Rx';
 
 import {EmploeesService} from '../emploees.service';
+import { Emploee } from '../emploee';
 
 @Component({
   selector: 'app-emploee-grid',
   templateUrl: './emploee-grid.component.html'
 })
 export class EmploeeGridComponent implements OnInit {
-  emploee: FirebaseListObservable<any>;
+  emploee: Emploee;
 
   constructor(
     private route: ActivatedRoute,
     private emploeesService: EmploeesService,
-    private af: AngularFire
-  ) {
-
-   }
+  ) { }
 
   ngOnInit() {
     this.route.params
       .map(params => params['id'])
       .subscribe((id) => {
-        this.emploee = this.af.database.list(`emploees/${id}`, { preserveSnapshot: true });
-        this.emploee.subscribe( snapshots => {
-          snapshots.forEach(snapshot => {
-            this.emploee[snapshot.key] = snapshot.val();
-          })
-        })
+        this.emploeesService.getEmploee(id)
+        .subscribe(emploee => {
+          this.emploee = emploee;
+        });
       });
   }
 

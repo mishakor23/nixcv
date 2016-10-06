@@ -1,12 +1,12 @@
-<header class="header">
+
+<header class="header" *ngIf="emploee">
     <div class="personal-info">
         <p class="personal-info__name"> {{ emploee.firstName }} </p>
         <p class="personal-info__surname">{{ emploee.lastName }}</p>
     </div>
     <div class="personal-photo"><img src="assets/img/nix_new_logo.png" alt="" /></div>
-
 </header>
-<main class="main">
+<main class="main" *ngIf="emploee">
     <table class="table">
         <tbody class="table__body">
            <tr class="table__row row--bold">

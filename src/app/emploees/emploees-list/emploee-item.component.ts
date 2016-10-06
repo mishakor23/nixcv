@@ -7,7 +7,6 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class EmploeeItemComponent implements OnInit {
   @Input() emploee;
   @Output() deleted = new EventEmitter();
-  indexArray: number[] = [];
   constructor() { }
 
   ngOnInit() {

@@ -12,7 +12,7 @@ import { Emploee } from '../emploee';
 export class EmploeesAddFormComponent implements OnInit {
   private emploeeId: string;
   private isNew = true;
-  emploee;
+  emploee: Emploee;
   newEmploee = {
     firstName: '',
     lastName: '',
@@ -38,13 +38,10 @@ export class EmploeesAddFormComponent implements OnInit {
           this.route.params
             .map(params => params['id'])
             .subscribe((id) => {
-              this.emploeeId = id;
-              this.emploee = this.af.database.list(`emploees/${id}`, { preserveSnapshot: true });
-              this.emploee.subscribe( snapshots => {
-                snapshots.forEach(snapshot => {
-                  this.emploee[snapshot.key] = snapshot.val();
-                })
-              })
+              this.emploeesService.getEmploee(id)
+              .subscribe(emploee => {
+                this.emploee = emploee;
+              });
             });
         } else {
           this.isNew = true;
@@ -66,10 +63,22 @@ export class EmploeesAddFormComponent implements OnInit {
               education
               } = this.newEmploee;
 
-      this.emploeesService.createEmploee(this.newEmploee);
+      this.emploeesService.createEmploee(this.newEmploee)
+        .subscribe(
+          data => {
+            console.log(data);
+          },
+          error => console.error(error)
+        );
       this.navigateBack();
     } else {
-      this.emploeesService.updateEmploee(this.emploee, this.emploeeId);
+      this.emploeesService.updateEmploee(this.emploee)
+      .subscribe(
+        data => {
+          console.log(data);
+        },
+        error => console.error(error)
+      );
       this.navigateBack();
     }
   }

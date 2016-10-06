@@ -5,8 +5,8 @@
 <main class="main">
     <ul class="resume__list">
       <app-emploee-item
-        *ngFor="let emploee of emploees | async"
+        *ngFor="let emploee of emploees"
         [emploee]="emploee"
-        (deleted)="onDeleteEmploee(emploee.$key)"></app-emploee-item>
+        (deleted)="onDeleteEmploee(emploee)"></app-emploee-item>
     </ul>
 </main>
